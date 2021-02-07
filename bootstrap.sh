@@ -1,6 +1,4 @@
-x11vnc -create -env FD_PROG=/usr/bin/startxfce4 \
-    -env X11VNC_FINDDISPLAY_ALWAYS_FAILS=1 \
-        -env X11VNC_CREATE_GEOM=${1:-1024x768x16} \
-        -gone 'killall Xvfb' \
-        -nopw -forever &
-xvfb-run google-chrome --no-sandbox
+Xvfb -ac :99 -screen 0 1280x720x16 &
+export DISPLAY=:99
+google-chrome --no-sandbox &
+x11vnc -nopw
