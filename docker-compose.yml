@@ -4,6 +4,10 @@ services:
   x11chrome:
     image: x11chrome
     build: ./
+    volumes:
+      - ./chrome-data:/root/.config/google-chrome/Default
     ports:
       - "5900:5900"
+
 # TODO: change to restart: always
+
