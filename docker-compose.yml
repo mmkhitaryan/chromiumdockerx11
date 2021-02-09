@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  x11chrome:
+    image: x11chrome
+    build: ./
+    ports:
+      - "8000:8000"
+# TODO: change to restart: always
