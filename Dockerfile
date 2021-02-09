@@ -10,4 +10,5 @@ RUN apt-get install -y xfce4 dbus-x11 --no-install-recommends
 RUN apt-get install -y x11vnc xvfb xfwm4
 RUN apt-get install -y xfce4-notifyd
 ADD bootstrap.sh /root/bootstrap.sh
+ADD listener.py /root/listener.py
 ENTRYPOINT ["/bin/bash", "/root/bootstrap.sh"]
