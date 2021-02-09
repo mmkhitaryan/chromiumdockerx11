@@ -5,5 +5,5 @@ services:
     image: x11chrome
     build: ./
     ports:
-      - "8000:8000"
+      - "5900:5900"
 # TODO: change to restart: always
